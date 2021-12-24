@@ -38,6 +38,7 @@ jobs:
           AWS_DEFAULT_REGION: '${{ secrets.AWS_DEFAULT_REGION }}'
           AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_SECRET_ACCESS_KEY }}'
           S3_BUCKET: '${{ secrets.S3_BUCKET }}'
+        run: aws s3 ls  
 
       - name: show files
         run: ls -la
