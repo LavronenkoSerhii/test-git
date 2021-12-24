@@ -13,14 +13,15 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-env:
-  AWS_ACCESS_KEY_ID:  '${{ secrets.AWS_ACCESS_KEY_ID }}'
-  AWS_DEFAULT_REGION: '${{ secrets.AWS_DEFAULT_REGION }}'
-  AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_SECRET_ACCESS_KEY }}'
-  S3_BUCKET: '${{ secrets.S3_BUCKET }}
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  env:
+    AWS_ACCESS_KEY_ID:  '${{ secrets.AWS_ACCESS_KEY_ID }}'
+    AWS_DEFAULT_REGION: '${{ secrets.AWS_DEFAULT_REGION }}'
+    AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_SECRET_ACCESS_KEY }}'
+    S3_BUCKET: '${{ secrets.S3_BUCKET }}
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
